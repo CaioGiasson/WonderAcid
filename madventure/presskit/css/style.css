@@ -7,11 +7,14 @@
       font-size: 28px;
     }
 
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
     menu a, .menu span{ 
       display: block;
       position: relative;
-      text-decoration: none;
-      color: #fff;
       font-size: 1em;
       cursor: pointer;
     }
