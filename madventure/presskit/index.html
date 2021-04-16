@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet " href="css/style.css">
+  <link rel="stylesheet" href="dist/css/glightbox.css" />
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <span onclick="goto('factsheet')">Factsheet</span>
     <span onclick="goto('descricao')">Descrição</span>
     <span onclick="goto('features')">Features</span>
-    <span onclick="goto('prints')">Prints</span>
+    <span onclick="goto('prints')">Imagens</span>
     <span onclick="goto('videos')">Vídeos</span>
     <span onclick="goto('equipe')">Equipe</span>
     <span onclick="goto('contato')">Contato & sociais</span>
@@ -82,7 +83,17 @@
         <li>Vá aonde quiser, faça o que quiser, quando quiser, só não esqueça de levar sua toalha</li>
       </ul>
 
-      <h3 class="prints">Prints</h3>
+      <h3 class="prints">Imagens</h3>
+      <div class="imgList">
+        <a href="img/dg1.png" class="glightbox"><img class="mini" src="img/dg1.png" alt="" /></a>
+        <a href="img/golem1.png" class="glightbox"><img class="mini" src="img/golem1.png" alt="" /></a>
+        <a href="img/skel1.png" class="glightbox"><img class="mini" src="img/skel1.png" alt="" /></a>
+        <a href="img/print1.jpeg" class="glightbox"><img class="mini" src="img/print1.jpeg" alt="" /></a>
+        <a href="img/print2.jpeg" class="glightbox"><img class="mini" src="img/print2.jpeg" alt="" /></a>
+        <a href="img/print3.jpeg" class="glightbox"><img class="mini" src="img/print3.jpeg" alt="" /></a>
+        <a href="img/cidade1.png" class="glightbox"><img class="mini" src="img/cidade1.png" alt="" /></a>
+      </div>
+
 
       <h3 class="videos">Vídeos</h3>
 
@@ -91,15 +102,24 @@
       <h3 class="contato">Contato & Sociais</h3>
 
 
+      <div class="ender"></div>
     </div>
   </div>
 
+
+  <script src="dist/js/glightbox.js"></script>
   <script>
     function goto(selector) {
       document.querySelector(`.${selector}`).scrollIntoView({
         behavior: 'smooth'
       });
     }
+
+    var lightbox = GLightbox();
+    lightbox.on('open', (target) => {
+      console.log('lightbox opened');
+    });
+
   </script>
 </body>
 
