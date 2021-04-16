@@ -87,6 +87,7 @@
     }
 
     p { margin: 0 }
+    p i { display: block; position: relative; font-size: 0.8em; margin-bottom: 15px; }
 
     .imgList { 
       display: block;
