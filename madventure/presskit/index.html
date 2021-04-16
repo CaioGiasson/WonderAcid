@@ -13,22 +13,23 @@
 <body>
 
   <div class="menu">
-    <a class="big" href="https://www.wonderacid.studio">WonderAcid</a>
-    <a href="#">Factsheet</a>
-    <a href="#">Descrição</a>
-    <a href="#">Features</a>
-    <a href="#">Prints</a>
-    <a href="#">Vídeos</a>
-    <a href="#">Equipe</a>
-    <a href="#">Contato & sociais</a>
+    <a class="big" target="_blank" href="https://www.wonderacid.studio">WonderAcid</a>
+    <span onclick="goto('factsheet')">Factsheet</span>
+    <span onclick="goto('descricao')">Descrição</span>
+    <span onclick="goto('features')">Features</span>
+    <span onclick="goto('prints')">Prints</span>
+    <span onclick="goto('videos')">Vídeos</span>
+    <span onclick="goto('equipe')">Equipe</span>
+    <span onclick="goto('contato')">Contato & sociais</span>
 
+    <span onclick="goto('logo')">Topo</span>
   </div>
 
   <div class="center">
 
-    <img src="img/golem1.png" alt="MadVenture" class="logo" />
+    <img src="img/logo.png" alt="MadVenture" class="logo" />
     <div class="left">
-      <h3>Factsheet</h3>
+      <h3 class="factsheet">Factsheet</h3>
 
       <p><b>Desenvolvido por</b></p>
       <p>WonderAcid Studio</p>
@@ -54,13 +55,52 @@
     </div>
 
     <div class="right">
-      <h3>Descrição</h3>
 
-      <p>Em um mundo fantástico, heróis se revez</p>
+      <h3 class="descricao">Descrição</h3>
+      <p>No reino fantástico de Tiroliria, muitos perigos espreitam, e cabe aos heróis salvarem a tudo e a todos... O
+        que não é o seu caso.</p>
+      <p>Enquanto bravas guerreiras e poderosos feiticeiros derrotam os monstros mais absurdos, alguém precisa fazer o
+        trabalho
+        sujo.</p>
+      <p>Alguém precisa proteger as hortas, guardar as ovelhas e combater as pequenas pragas. Alguém precisa fabricar os
+        chicotes de alho para a luta contra os vampiros ou flechas de sal para furar fantasmas.</p>
+      <p>Diferente dos almofadinhas, ninguém vai te dizer o que fazer. Ainda assim, precisa ser feito. E depois,
+        ninguém vai bater palmas ou soltar fogos de artifício, mas o problema estará resolvido.</p>
+      <p>Teste as mais bizarras matérias-primas para suas ferramentas e armas, derrote os inimigos com quem ninguém quer
+        lutar e resolva os problemas que ninguém dá bola no RPG mais descontraído e imprevisível que vai encontrar!</p>
+
+      <h3 class="features">Features</h3>
+      <ul>
+        <li>História descontraída e sarcástica, cheia de referências e ironia</li>
+        <li>Fabrique itens com os materiais mais absurdos, e incrivelmente, eles podem ter sua utilidade</li>
+        <li>Batalhas rápidas, sem enrolação, mas nem por isso menos táticas</li>
+        <li>Vença os desafios usando a criatividade em vez da força bruta</li>
+        <li>Experimente aquele lado das histórias fantásticas que os bardos não contam</li>
+        <li>Sessões curtas e com autosave, permitindo parar de jogar a hora que quiser. Agora sim, ir ao banheiro dá XP
+        </li>
+        <li>Chame seus amigos para ajudar nos maiores desafios (ou só para rirem juntos)</li>
+        <li>Vá aonde quiser, faça o que quiser, quando quiser, só não esqueça de levar sua toalha</li>
+      </ul>
+
+      <h3 class="prints">Prints</h3>
+
+      <h3 class="videos">Vídeos</h3>
+
+      <h3 class="equipe">Equipe</h3>
+
+      <h3 class="contato">Contato & Sociais</h3>
+
 
     </div>
   </div>
 
+  <script>
+    function goto(selector) {
+      document.querySelector(`.${selector}`).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </body>
 
 </html>

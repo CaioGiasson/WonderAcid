@@ -4,15 +4,16 @@
       background: #444;
       color: #eee;
       font-family: 'Amatic SC', cursive;
-      font-size: 24px;
+      font-size: 28px;
     }
 
-    a { 
+    a, .menu span{ 
       display: block;
       position: relative;
       text-decoration: none;
       color: #fff;
       font-size: 1em;
+      cursor: pointer;
     }
 
     a.big { 
@@ -24,21 +25,28 @@
       position: relative;
       width: 960px;
       margin: 0 auto;
-      left: 200px;
+      left: 100px;
     }
 
     .left {
       display: block;
       position: relative;
       float: left;
-      width: 30%;
+      width: calc(30% - 10px);
+      padding-left: 10px;
+    }
+
+    .left p { 
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 0.6em;
+      letter-spacing: 2px;
     }
 
     .logo { 
       display: block;
       position: relative;
-      margin: 30px auto 0 auto;
-      height: 170px; 
+      margin: -20px auto -60px auto;
+      height: 300px; 
     }
 
     .right {
@@ -49,13 +57,20 @@
       padding-left: 30px;
     }
 
+    .right p { 
+      text-indent: 35px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 0.8em;
+      letter-spacing: 2px;
+    }
+
     .menu { 
       display: block;
       position: fixed;
       width: 200px;
       height: 100vh;
       top: 0;
-      left: 10px;
+      left: calc(50vw - 480px - 120px);
       padding-top: 50px;
       border-right: solid 2px #ccc;
     }
